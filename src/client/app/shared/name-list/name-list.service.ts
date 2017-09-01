@@ -15,23 +15,31 @@ export class NameListService {
    * @param {Http} http - The injected Http.
    * @constructor
    */
-  constructor(private http: Http) {}
+  constructor(private http: Http) { }
 
   /**
    * Returns an Observable for the HTTP GET request for the JSON resource.
-   * @return {string[]} The Observable for the HTTP request.
+   * @return {object[]} The Observable for the HTTP request.
    */
-  get(): Observable<string[]> {
-    return this.http.get(`${Config.API}/api/name-list/static`)
-      .map((res: Response) => res.json())
-    //              .do(data => console.log('server data:', data))  // debug
-                    .catch(this.handleError);
+  get(): Observable<object[]> {
+    return this.http.get(`${Config.API}/api/name-list`)
+      .map((res: Response) => {
+        console.log(res.json());
+        return res.json();
+      })
+      //              .do(data => console.log('server data:', data))  // debug
+      .catch(this.handleError);
+  }
+
+  post(name: string) {
+    return this.http.post(`${Config.API}/api/name-list`, { name: name })
+      .catch(this.handleError);
   }
 
   /**
     * Handle HTTP error
     */
-  private handleError (error: any) {
+  private handleError(error: any) {
     // In a real world app, we might use a remote logging infrastructure
     // We'd also dig deeper into the error to get a better message
     let errMsg = (error.message) ? error.message :
