@@ -257,13 +257,29 @@ $ src/redis-server
  - Redis [Persistence](http://redis.io/topics/quickstart#redis-persistence)
  - Redis [More Properties](http://redis.io/topics/quickstart#installing-redis-more-properly)
 
-# MongoDB
+# MongoDB Download/Install
 
- - In progress
+ - About [MongoDB](https://www.mongodb.com/).
+ - [Download](https://www.mongodb.com/download-center#community) and [install](https://docs.mongodb.com/manual/administration/install-community/) latest stable version of MongoDB.
+ - [Documentation](https://docs.mongodb.com/manual/) about MongoDB.
 
-# MySQL
+# MongoDB Start
+After installation we need to start our server:
+```sh
+# start server
+C:\Program Files\MongoDB\Server\3.4\bin>mongod.exe --dbpath d:\mongodata\db
+```
 
- - In progress
+# MongoDB app configuration
+By default our node application uses the following connection: 'mongodb://localhost/mongotest'. To override this setting you can simply pass the connection string via the cmd parameter:
+```sh
+# start node dev server
+$ node app.server.dev.js --mongo_connection=[target mongo connection]
+```
+
+or by setting MONGO_CONNECTION environment variable. The priority is
+
+`command line parameter > environment variable > default connection`
 
 # Contributors
 

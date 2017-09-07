@@ -5,8 +5,7 @@ import * as path from 'path';
 import * as compression from 'compression';
 import Config from './config/server.config';
 import setRoutes from './routes';
-
-import * as mongoose from 'mongoose';
+import { DbInit } from './db/mongoose';
 
 /**
  * Client Dir
@@ -67,12 +66,7 @@ export function init(port: number, mode: string) {
     app.use('/assets', express.static(path.resolve(__dirname, _clientDir + '/assets')));
   }
 
-  let uri = 'mongodb://localhost/mongotest';
-  mongoose.connect(uri, { useMongoClient: true });
-  const db = mongoose.connection;
-  (<any>mongoose).Promise = global.Promise;
-  db.on('error', console.error.bind(console, 'connection error:'));
-  db.once('open', () => {
+  DbInit(() => {
     console.log('Connected to MongoDB');
 
     setRoutes(app);

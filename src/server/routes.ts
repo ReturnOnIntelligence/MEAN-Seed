@@ -1,15 +1,17 @@
 import * as express from 'express';
 import User from './db/entity/user';
+import { UserServise } from './services/user.service';
 
 export default function setRoutes(app: express.Application) {
   const router = express.Router();
+  let userService = new UserServise;
 
   /**
  * Get name list.
  * @database
  */
   router.route('/name-list').get((req: any, res: any) => {
-    User.find({}, (err: any, docs: any) => {
+    userService.getUsers((err: any, docs: any) => {
       if (err) { return console.error(err); }
       res.json(docs);
     });
@@ -20,8 +22,7 @@ export default function setRoutes(app: express.Application) {
  * @database
  */
   router.route('/name-list').post((req: any, res: any) => {
-    var newUser = new User(req.body);
-    newUser.save((err: any, item: any) => {
+    userService.saveNewUser(req.body, (err: any, item: any) => {
       // 11000 is the code for duplicate key error
       if (err && err.code === 11000) {
         res.sendStatus(400);
