@@ -39,12 +39,6 @@ $ npm run build.dev
 # prod build
 $ npm run build.prod
 
-# run Redis
-$ src/redis-server
-# stop Redis
-$ src/redis-cli
-$ shutdown SAVE
-
 # run Express server (keep in touch, only after `npm run build.prod` )
 $ node app.server.prod.js
 # or development
@@ -237,25 +231,6 @@ server {
     }
 }
 ```
-
-# Redis Download/Install
-
- - About [Redis](http://redis.io/).
- - [Download](http://redis.io/download#download) and [install](http://redis.io/download#installation) latest stable version of Redis.
- - [Documentation](http://redis.io/documentation) about Redis.
-
-# Redis Start
-
-After installation we need to start our server:
-```sh
-# start server
-$ src/redis-server
-```
-
-# Redis More Settings + Daemonize
-
- - Redis [Persistence](http://redis.io/topics/quickstart#redis-persistence)
- - Redis [More Properties](http://redis.io/topics/quickstart#installing-redis-more-properly)
 
 # MongoDB Download/Install
 
