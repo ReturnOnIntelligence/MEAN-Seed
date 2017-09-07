@@ -2,6 +2,17 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Start server debug (fast)",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "build.dev",
+      "program": "${workspaceRoot}/app.server.dev.js",
+      "cwd": "${workspaceRoot}",
+      "outFiles": [
+        "${workspaceRoot}/dist/dev/**/*.js"
+      ]
+    },
+    {
       "name": "Launch Chrome against localhost, with sourcemaps",
       "type": "chrome",
       "preLaunchTask": "start",

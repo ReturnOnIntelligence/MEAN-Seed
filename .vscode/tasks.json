@@ -6,8 +6,18 @@
   "suppressTaskName": true,
   "tasks": [
     {
+      "taskName": "build.dev",
+      "args": [
+        "run",
+        "build.dev"
+      ]
+    },
+    {
       "taskName": "tslint",
-      "args": [ "run", "lint" ],
+      "args": [
+        "run",
+        "lint"
+      ],
       "problemMatcher": {
         "owner": "tslint",
         "fileLocation": [
