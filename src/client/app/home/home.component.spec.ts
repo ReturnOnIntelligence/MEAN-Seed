@@ -2,7 +2,7 @@ import { FormsModule } from '@angular/forms';
 import {
   async,
   TestBed
- } from '@angular/core/testing';
+} from '@angular/core/testing';
 
 import { Observable } from 'rxjs/Observable';
 
@@ -36,7 +36,7 @@ export function main() {
               fixture.debugElement.injector.get<any>(NameListService) as MockNameListService;
             let nameListServiceSpy = spyOn(mockNameListService, 'get').and.callThrough();
 
-            mockNameListService.returnValue = ['1', '2', '3'];
+            mockNameListService.returnValue = [{ name: '1' }, { name: '2' }, { name: '3' }];
 
             fixture.detectChanges();
 
@@ -59,7 +59,7 @@ export function main() {
 
 class MockNameListService {
 
-  returnValue: string[];
+  returnValue: object[];
 
   get(): Observable<string[]> {
     return Observable.create((observer: any) => {
@@ -67,4 +67,11 @@ class MockNameListService {
       observer.complete();
     });
   }
+  post(name: string): Observable<boolean> {
+    this.returnValue.push({ name: name });
+    return Observable.create((observer: any) => {
+      observer.next(true);
+      observer.complete();
+    });
+  };
 }
