@@ -29,6 +29,15 @@ export function init(port: number, mode: string) {
   app.use(bodyParser.text());
   app.use(compression());
 
+  /* NOTE: This disables caching */
+  app.all("/api/*", function noCache(req, res, next) {
+    res.header("Cache-Control", "no-cache, no-store, must-revalidate");
+    res.header("Pragma", "no-cache");
+    res.header("Expires", "0");
+    next();
+  });
+
+
   /**
    * Dev Mode.
    * @note Dev server will only give for you middleware.
