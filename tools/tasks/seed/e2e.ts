@@ -21,6 +21,9 @@ export = (done: any) => {
         .src(join(Config.DEV_DEST, '**/*.e2e-spec.js'))
         .pipe(protractor({ configFile: 'protractor.conf.js' }))
         .on('error', (error: string) => { throw error; })
-        .on('end', () => { server.close(done); });
+        .on('end', () => {
+          server.close(done);
+          process.exit();
+        });
     });
 };
