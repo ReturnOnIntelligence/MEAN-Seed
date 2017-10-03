@@ -155,6 +155,7 @@
     "@angular/service-worker": "^1.0.0-beta.16",
     "@types/body-parser": "^1.16.5",
     "@types/compression": "0.0.34",
+    "@types/mongoose": "^4.7.23",
     "@types/redis": "^2.6.0",
     "body-parser": "^1.17.2",
     "compression": "^1.7.0",
@@ -163,6 +164,7 @@
     "intl": "^1.2.5",
     "mongoose": "^4.10.4",
     "morgan": "^1.8.2",
+    "node-gyp": "^3.6.2",
     "rxjs": "^5.2.0",
     "systemjs": "0.20.14",
     "zone.js": "0.8.12"
