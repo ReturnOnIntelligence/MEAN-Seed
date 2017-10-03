@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
     .subscribe(x => {
       this.getNames();
     });
-    
+
     this.newName = '';
     return false;
   }
