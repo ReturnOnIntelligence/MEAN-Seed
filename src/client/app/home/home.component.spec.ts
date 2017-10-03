@@ -67,11 +67,12 @@ class MockNameListService {
       observer.complete();
     });
   }
+  
   post(name: string): Observable<boolean> {
     this.returnValue.push({ name: name });
     return Observable.create((observer: any) => {
       observer.next(true);
       observer.complete();
     });
-  };
+  }
 }
