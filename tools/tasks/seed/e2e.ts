@@ -14,6 +14,7 @@ class Protractor {
  */
 export = (done: any) => {
   process.env.LANG = 'en_US.UTF-8';
+  var mongoose = require('mongoose');
   new Protractor()
     .server(9000)
     .then((server: any) => {
@@ -23,7 +24,7 @@ export = (done: any) => {
         .on('error', (error: string) => { throw error; })
         .on('end', () => {
           server.close(done);
-          process.exit();
+          mongoose.connection.close();
         });
     });
 };
