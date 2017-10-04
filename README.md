@@ -4,8 +4,8 @@
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 [![Build status](https://ci.appveyor.com/api/projects/status/0p1fg5dd2ohyq1oh/branch/master?svg=true)](https://ci.appveyor.com/project/AlexanderVasyaevROI/mean-seed)
 [![Build Status](https://travis-ci.org/ReturnOnIntelligence/MEAN-seed.svg?branch=master)](https://travis-ci.org/ReturnOnIntelligence/MEAN-seed)
-[![Dependency Status](https://david-dm.org/vyakymenko/angular-seed-express.svg)](https://david-dm.org/vyakymenko/angular-seed-express)
-[![devDependency Status](https://david-dm.org/vyakymenko/angular-seed-express/dev-status.svg)](https://david-dm.org/vyakymenko/angular-seed-express#info=devDependencies)
+[![Dependency Status](https://david-dm.org/ReturnOnIntelligence/MEAN-seed.svg)](https://david-dm.org/ReturnOnIntelligence/MEAN-seed)
+[![devDependency Status](https://david-dm.org/ReturnOnIntelligence/MEAN-seed/dev-status.svg)](https://david-dm.org/ReturnOnIntelligence/MEAN-seed#info=devDependencies)
 
 **Want to feel like a full-stack Angular 2 developer but know only Express?**
 

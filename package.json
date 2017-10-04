@@ -1,8 +1,8 @@
 {
-  "name": "angular-seed-express",
+  "name": "mean-seed",
   "version": "4.3.0",
-  "description": "Modular starter project for Angular 2 (and beyond) with statically typed build and AoT compilation with Express",
-  "repository": "https://github.com/vyakymenko/angular-seed-express.git",
+  "description": "Modular starter project for Angular 2 (and beyond) with statically typed build and AoT compilation with Express aтв MongoDB",
+  "repository": "https://github.com/ReturnOnIntelligence/MEAN-seed.git",
   "scripts": {
     "build.dev": "gulp build.dev --color --env-config dev",
     "build.dev.watch": "gulp build.dev.watch --color",
@@ -44,10 +44,10 @@
     "compodoc": "./node_modules/.bin/compodoc -p src/client/tsconfig.json",
     "serve.compodoc": "./node_modules/.bin/compodoc -s"
   },
-  "author": "Minko Gechev <mgechev>",
+  "author": "Minko Gechev <mgechev>, Valentyn Yakymenko <vyakymenko>",
   "contributors": [
     {
-      "name": "Valentyn Yakymenko <vyakymenko>"
+      "name": "Alexander Vasyaev <AlexanderVasyaevROI>"
     }
   ],
   "license": "MIT",
