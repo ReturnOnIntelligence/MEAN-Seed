@@ -32,3 +32,6 @@ test_script:
   - npm run tests.all
 
 cache: node_modules -> package.json
+
+services:
+  - mongodb

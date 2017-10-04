@@ -3,7 +3,7 @@
 [![Angular 2 Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 [![Build status](https://ci.appveyor.com/api/projects/status/github/AlexanderVasyaevROI/mean-seed?branch=master&?svg=true)](https://ci.appveyor.com/project/AlexanderVasyaevROI/mean-seed)
-[![Build Status](https://travis-ci.org/vyakymenko/angular-seed-express.svg?branch=master)](https://travis-ci.org/vyakymenko/angular-seed-express)
+[![Build Status](https://travis-ci.org/ReturnOnIntelligence/MEAN-seed.svg?branch=master)](https://travis-ci.org/ReturnOnIntelligence/MEAN-seed)
 [![Dependency Status](https://david-dm.org/vyakymenko/angular-seed-express.svg)](https://david-dm.org/vyakymenko/angular-seed-express)
 [![devDependency Status](https://david-dm.org/vyakymenko/angular-seed-express/dev-status.svg)](https://david-dm.org/vyakymenko/angular-seed-express#info=devDependencies)
 
